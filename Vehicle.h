@@ -5,6 +5,8 @@
 
 struct Vehicle
 {
+    friend struct HighwayPatrol;
+
     Vehicle(const std::string& n) : name(n) { }
     
     //Special member Functions.  See instruction 9) and note in main()
