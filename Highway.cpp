@@ -30,7 +30,7 @@ void Highway::addVehicleInternal(Vehicle* v)
     }
     else if( auto* semiTruck = dynamic_cast<SemiTruck*>(v) ) 
     {
-        semiTruck->lanesplitAndRace(200);
+        semiTruck->disableOffRoadMode();
     }
 }
 
