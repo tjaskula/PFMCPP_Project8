@@ -2,6 +2,7 @@
 
 #include "Vehicle.h"
 
+struct Highway; // forward declaration because we use only pointers
 struct HighwayPatrol : Vehicle 
 {
     HighwayPatrol();
