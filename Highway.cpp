@@ -1,6 +1,7 @@
 #include "Highway.h"
 #include "Car.h"
 #include "Motorcycle.h"
+#include "SemiTruck.h"
 
 #include <cassert>
 
@@ -27,6 +28,10 @@ void Highway::addVehicleInternal(Vehicle* v)
     {
         motorcycle->lanesplitAndRace(200);
     }
+    else if( auto* semiTruck = dynamic_cast<SemiTruck*>(v) ) 
+    {
+        semiTruck->lanesplitAndRace(200);
+    }
 }
 
 void Highway::removeVehicleInternal(Vehicle* v)
@@ -43,6 +48,10 @@ void Highway::removeVehicleInternal(Vehicle* v)
     else if( auto* motorcycle = dynamic_cast<Motorcycle*>(v) ) 
     {
         motorcycle->tryToEvade();
+    }
+    else if( auto* semiTruck = dynamic_cast<SemiTruck*>(v) ) 
+    {
+        semiTruck->pullOver();
     }
 }
 
