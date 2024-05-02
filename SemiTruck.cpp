@@ -15,6 +15,6 @@ void SemiTruck::pullOver()
 
 void SemiTruck::disableOffRoadMode()
 {
-    setSpeed(speed);
+    setSpeed(65);
     std::cout << name << ": disabling off road mode on the highway!" << std::endl;
 }
