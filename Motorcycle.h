@@ -3,7 +3,7 @@
 #include <iostream>
 #include <limits>
 
-struct Motorcycle : public Vehicle
+struct Motorcycle : Vehicle
 {
     Motorcycle(const std::string& n);
     //Special member Functions.  See instruction 9) and note in main()
